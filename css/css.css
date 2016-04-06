@@ -1,0 +1,32 @@
+.boardSpace{
+  height: 200px;
+  width: 200px;
+  background-color: #eee;
+  border-style: solid;
+  border-color: #fff;
+  border-width: 5px;
+  text-align: center;
+  font-size: 110px;
+
+}
+.board{
+
+}
+.jumbotron {
+  font-size: 72pt;
+  text-align: center;
+  background-color: black;
+  color: #eee;
+  font-family: ‘Lucida Console’, Monaco, monospace;
+}
+
+.hidden{
+  display: none;
+}
+
+#playerOne{
+  color: red;
+}
+#playerTwo{
+  color: blue;
+}
