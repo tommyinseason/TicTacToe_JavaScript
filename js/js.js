@@ -1,20 +1,21 @@
 //business logic
+function game (players, spaces, scoring){
+  this.players = [];
+  this.spaces = theSpaces;
+  this.scoring = the;
+}
+
+function Players(player1, player2){
+  this.player1 = X;
+  this.player2 = O;
+}
+
 
 var boardArray = ['1A', '1B', '1C', '2A', '2B', '2C', '3A', '3B', '3C'];
 var playerOneSelect = "X";
 var playerTwoSelect = "O";
 var clickCount = 0;
 
-
-
-function Players(player1, player2){
-  this.player1 = X;
-  this.player2 = O;
-}
-// function board(row1, row2, row3)
-//   this.row1 = boardArray.slice(0, 2);
-//   this.row2 = boardArray.slice(3, 5);
-//   this.row3 = boardArray.slice(6, 8);
 
 function Spaces(AA, AB, AC, BA, BB, BC, CA, CB, CC){
   this.AA = topLeft;
@@ -28,10 +29,6 @@ function Spaces(AA, AB, AC, BA, BB, BC, CA, CB, CC){
   this.CC = bottomRight;
 }
 
-// Players.prototype.activePlayer = function(){
-//
-// }
-
 
 //user logic
 
@@ -44,12 +41,12 @@ $(document).ready(function() {
     console.log(clickCount);
 
    });
-  $('div.boardSpace').click(function(){
+  $('div.boardSpace').click(function(event){
     if (clickCount%2 === 0){
-      $('span#span1A').text(playerTwoSelect);
+      $(event.target).text(playerTwoSelect);
     }
     else {
-      $('span#span1A').text(playerOneSelect);
+      $(event.target).text(playerOneSelect);
     }
   });
 
