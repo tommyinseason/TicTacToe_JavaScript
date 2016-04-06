@@ -1,33 +1,35 @@
 //business logic
-function game (players, spaces, scoring){
-  this.players = [];
-  this.spaces = theSpaces;
-  this.scoring = the;
+function Game(){
+  this.player = "X";
+  this.space = [["","",""]["","",""]["","",""]];
+
+  this.nextPlayer = function(){
+    if(this.player === "X"){
+      this.player = "O";
+    } else { this.player = "X"; }
+  }
+  this.setSpace = function(('div#1A'),('div#1B'),('div#1C'),('div#2A'),('div#2B'),('div#2C'),('div#3A'),('div#3B'),('div#3C')){
+
+  }
 }
 
-function Players(player1, player2){
-  this.player1 = X;
-  this.player2 = O;
+
+function Start() {
+  newGame = new Game();
+  $('.boardSpace').text('');
 }
 
 
-var boardArray = ['1A', '1B', '1C', '2A', '2B', '2C', '3A', '3B', '3C'];
 var playerOneSelect = "X";
 var playerTwoSelect = "O";
 var clickCount = 0;
 
 
-function Spaces(AA, AB, AC, BA, BB, BC, CA, CB, CC){
-  this.AA = topLeft;
-  this.AB = topCenter;
-  this.AC = topRight;
-  this.BA = middleLeft;
-  this.BB = middleCenter;
-  this.BC = middleRight;
-  this.CA = bottomLeft;
-  this.CB = bottomCenter;
-  this.CC = bottomRight;
-}
+
+
+
+
+
 
 // if((event.target).hasClass("O") || (event.target).hasClass("X")){
 //   $(this).text("");
@@ -51,15 +53,20 @@ $(document).ready(function() {
   $('div.boardSpace').click(function(event){
     console.log(event.target);
 
+    if (newGame.setSpace(parseInt($(this).parent().attr('id')), parseInt($(this).attr('value')))) {
+      $(event.target).addClass('active');
+      newGame.nextPlayer();
+    }
+
    if (clickCount%2 === 0){
       $(event.target).text(playerTwoSelect);
-        // $(event.target).addClass("O");
+        //$(event.target).addClass("O");
         console.log(clickCount);
         console.log(event.target);
     }
    if (clickCount%2 !== 0){
       $(event.target).text(playerOneSelect);
-        // $(event.target).addClass("X");
+        //$(event.target).addClass("X");
         console.log(clickCount);
         console.log(event.target);
     }
