@@ -29,25 +29,41 @@ function Spaces(AA, AB, AC, BA, BB, BC, CA, CB, CC){
   this.CC = bottomRight;
 }
 
+// if((event.target).hasClass("O") || (event.target).hasClass("X")){
+//   $(this).text("");
+//   clickCount = clickCount - 1;
+//   console.log(clickCount);
+// }
+
+
 
 //user logic
 
 $(document).ready(function() {
 
   $('div.boardSpace').click(function() {
-    $('h2#playerOne').toggleClass('hidden');
-    $('h2#playerTwo').toggleClass('hidden');
+    $('h2.playerTurn').toggleClass('hidden');
     clickCount = clickCount + 1;
-    console.log(clickCount);
+
 
    });
+
   $('div.boardSpace').click(function(event){
-    if (clickCount%2 === 0){
+    console.log(event.target);
+
+   if (clickCount%2 === 0){
       $(event.target).text(playerTwoSelect);
+        // $(event.target).addClass("O");
+        console.log(clickCount);
+        console.log(event.target);
     }
-    else {
+   if (clickCount%2 !== 0){
       $(event.target).text(playerOneSelect);
+        // $(event.target).addClass("X");
+        console.log(clickCount);
+        console.log(event.target);
     }
+
   });
 
 });

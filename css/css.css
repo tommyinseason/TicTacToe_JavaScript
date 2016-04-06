@@ -1,7 +1,7 @@
 .boardSpace{
   height: 200px;
   width: 200px;
-  background-color: #eee;
+  background-color: #7485a3;
   border-style: solid;
   border-color: #fff;
   border-width: 5px;
@@ -10,6 +10,7 @@
 
 }
 .board{
+  color: #fff;
 
 }
 .jumbotron {
@@ -17,7 +18,7 @@
   text-align: center;
   background-color: black;
   color: #eee;
-  font-family: ‘Lucida Console’, Monaco, monospace;
+  font-family: 'Shadows Into Light', cursive;
 }
 
 .hidden{
@@ -29,4 +30,11 @@
 }
 #playerTwo{
   color: blue;
+}
+
+.btn:hover {
+  color: inherit;
+}
+.playerTurn{
+
 }
