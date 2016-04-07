@@ -1,40 +1,36 @@
 .boardSpace{
-  height: 200px;
-  width: 200px;
+  height: 260px;
+  width: 260px;
   background-color: #7485a3;
-  border-style: solid;
-  border-color: #fff;
+  border-style: inset;
+  border-color: #fff2ca;
   border-width: 5px;
   text-align: center;
-  font-size: 110px;
-
-
-}
-.board{
-  color: #fff;
-
-}
-.jumbotron {
-  font-size: 72pt;
-  text-align: center;
-  background-color: black;
-  color: #eee;
+  font-size: 170px;
+  color: #fff2ca;
   font-family: 'Shadows Into Light', cursive;
 }
 
+.jumbotron {
+  text-align: center;
+  background-color: black;
+  color: #fff2ca;
+  font-family: 'Shadows Into Light', cursive;
+}
 .hidden{
   display: none;
 }
-
 #playerOne{
+  font-size: 70px;
   color: red;
 }
 #playerTwo{
+  font-size: 70px;
   color: blue;
 }
-
 .btn:hover {
-  color: inherit;
+  color: #fff2ca;
 }
-.playerTurn{
+body{
+  background-color: #fff2ca;
 }
