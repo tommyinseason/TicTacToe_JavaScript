@@ -1,4 +1,4 @@
-//business logic
+//business logic stuff
 function Game(){
   this.player = "X";
   this.space = [["","",""]["","",""]["","",""]];
