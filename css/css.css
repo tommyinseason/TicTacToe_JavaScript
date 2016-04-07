@@ -16,8 +16,10 @@
   background-color: black;
   color: #fff2ca;
   font-family: 'Shadows Into Light', cursive;
+  width: 750px;
+  height: 250px;
 }
-.hidden{
+.hidden2{
   display: none;
 }
 #playerOne{
@@ -33,4 +35,11 @@
 }
 body{
   background-color: #fff2ca;
+  margin: auto;
+  width: 75%;
+  padding: 10px;
+
+}
+#reset{
+  color: #000;
 }

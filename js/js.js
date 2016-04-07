@@ -17,10 +17,7 @@ function Game(){
       return true;
     } else { return false; }
   }
-function Start() {
-  var newGame = new Game();
-  $('.boardSpace').text('');
-}
+
 
 this.winCheck = function(){
   for (var i=0; i<this.space[0].length; i++){
@@ -33,7 +30,7 @@ this.winCheck = function(){
     for (var k = 0; k < this.space[0].length; k++) {
       var column = "";
       for (var i=0; i<this.space.length; i++){
-        column = column + this.space[i][k];
+        var column = column + this.space[i][k];
       }
       if (column === "XXX"){
         return player1Wins = true;
@@ -50,7 +47,7 @@ this.winCheck = function(){
       }
     }
     if (this.space.join("").length === 15){
-      console.log(this.space.join(""))
+      console.log(this.space.join(""));
       return catsGame = true;
     }
   }
@@ -59,42 +56,61 @@ this.winCheck = function(){
 //user logic
 
 $(document).ready(function() {
+console.log("player1Wins " + player1Wins);
+console.log("player2Wins " + player2Wins);
+
 
   var newGame = new Game();
 
   $('div.boardSpace').click(function() {
-    $('h2.playerTurn').toggleClass('hidden');
+    $('h2.playerTurn').toggleClass('hidden2');
 
    });
 
   $('div.boardSpace').click(function(event){
 
     if (newGame.setSpace(parseInt($(this).parent().attr('id')), parseInt($(this).attr('value')))) {
-      $(this).text(newGame.player);
+      $(event.target).text(newGame.player);
       $(event.target).addClass('active');
       newGame.nextPlayer();
-      console.log(newGame.space[0]);
-      console.log(newGame.space[1]);
-      console.log(newGame.space[2]);
     }
   });
   $('div.boardSpace').click(function(event){
+
+    console.log(player1Wins);
+    console.log("string")
+    // console.log(player2Wins);
+    // console.log(catsGame);
     newGame.winCheck();
     if (player1Wins === true){
       $('.boardSpace').text('X');
-      $('h1#winner1').toggleClass('hidden');
-      $('div#winnerBox').toggleClass('hidden');
+      $('h1#winner1').toggleClass('hidden2');
+      $('div#winnerBox').toggleClass('hidden2');
+        debugger;
     }
     if (player2Wins === true){
       $('.boardSpace').text('O');
-      $('h1#winner2').toggleClass('hidden');
-      $('div#winnerBox').toggleClass('hidden');
+      $('h1#winner2').toggleClass('hidden2');
+      $('div#winnerBox').toggleClass('hidden2');
     }
     if (catsGame === true){
       $('.boardSpace').text('');
-      $('h1#noWinner').toggleClass('hidden');
-      $('div#winnerBox').toggleClass('hidden');
+      $('h1#noWinner').toggleClass('hidden2');
+      $('div#winnerBox').toggleClass('hidden2');
     }
 
+    });
+    $('button#reset').click(function() {
+
+        $('div.boardSpace').text('');
+        $('h1#noWinner').addClass('hidden2');
+        $('h1#winner1').addClass('hidden2');
+        $('h1#winner2').addClass('hidden2');
+        $('div#winnerBox').addClass('hidden2');
+
+        player1Wins = false;
+        player2Wins = false;
+        catsGame = false;
+        newGame.space = [["","",""], ["","",""], ["","",""]]
+    });
   });
-});

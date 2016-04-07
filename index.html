@@ -13,12 +13,12 @@
       <div class="jumbotron">
         <h1>!!TIC-TAC-TOE!!</h1>
         <h2 class="playerTurn" id="playerOne">PLAYER 1'S TURN</h2>
-        <h2 class="playerTurn hidden" id="playerTwo">PLAYER 2'S TURN</h2>
+        <h2 class="playerTurn hidden2" id="playerTwo">PLAYER 2'S TURN</h2>
       </div>
     </div>
     <div class="container board">
       <div class="row" id="0">
-        <div id='1A' value='0' class="col-xs-4 boardSpace btn btn-active col-xs-offset-2">
+        <div id='1A' value='0' class="col-xs-4 boardSpace btn btn-active">
         <!--<span id='span1A'></span>-->
       </div>
         <div id='1B' value='1' class="col-xs-4 boardSpace btn btn-active">
@@ -29,7 +29,7 @@
       </div>
       </div>
       <div class="row" id="1">
-        <div id='2A' value='0' class="col-xs-4 boardSpace btn btn-active col-xs-offset-2">
+        <div id='2A' value='0' class="col-xs-4 boardSpace btn btn-active">
         <!--<span id='span2A'></span>-->
       </div>
         <div id='2B' value='1' class="col-xs-4 boardSpace btn btn-active">
@@ -40,7 +40,7 @@
       </div>
       </div>
       <div class="row" id="2">
-        <div id='3A' value='0' class="col-xs-4 boardSpace btn btn-active col-xs-offset-2">
+        <div id='3A' value='0' class="col-xs-4 boardSpace btn btn-active">
         <!--<span id='span3A'></span>-->
       </div>
         <div id='3B' value='1' class="col-xs-4 boardSpace btn btn-active">
@@ -52,10 +52,11 @@
       </div>
     </div>
     <div class="container">
-      <div id="winnerBox" class="jumbotron hidden">
-        <h1 id="winner1" class="hidden">Player "X" wins the game!</h1>
-        <h1 id="winner2" class="hidden">Player "O" wins the game!</h1>
-        <h1 id="noWinner" class="hidden">EVERYONE LOSES!</h1>
+      <div id="winnerBox" class="jumbotron hidden2">
+        <h1 id="winner1" class="hidden2">Player "X" wins the game!</h1>
+        <h1 id="winner2" class="hidden2">Player "O" wins the game!</h1>
+        <h1 id="noWinner" class="hidden2">EVERYONE LOSES!</h1>
+        <button id="reset">Reset the game</button>
       </div>
     </div>
   </body>
